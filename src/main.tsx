@@ -4,9 +4,10 @@ import { BrowserRouter } from "react-router-dom";
 
 import App from "./App.tsx";
 import { Provider } from "./provider.tsx";
-import "@/styles/globals.css";
 import { Spinner } from "@heroui/react";
 import { NetworkProvider } from "./hook/useNetwork.tsx";
+import "@/styles/globals.css";
+import '@/styles/base.scss';
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>

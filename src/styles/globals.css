@@ -1,6 +1,6 @@
 @import "tailwindcss";
-
 @config "../../tailwind.config.js";
+@use "video.scss";
 
 .rounded-large {
     border-radius: 0px!important;

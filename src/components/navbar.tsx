@@ -17,14 +17,12 @@ import clsx from "clsx";
 import { siteConfig } from "@/config/site";
 import { ThemeSwitch } from "@/components/theme-switch";
 import {
-  TwitterIcon,
   GithubIcon,
-  DiscordIcon,
-  HeartFilledIcon,
   SearchIcon,
 } from "@/components/icons";
 import { Logo } from "@/components/icons";
-import { Avatar, Spacer } from "@heroui/react";
+import { Avatar, useDisclosure } from "@heroui/react";
+import EventDrawer from "./drawer/eventDrawer";
 
 export const Navbar = () => {
   const searchInput = (
@@ -47,9 +45,9 @@ export const Navbar = () => {
       type="search"
     />
   );
-
+  const { isOpen, onOpen, onOpenChange } = useDisclosure();
   return (
-    <HeroUINavbar maxWidth="xl" position="sticky">
+    <HeroUINavbar maxWidth="full" className="fixed">
       <NavbarContent className="basis-1/5 sm:basis-full" justify="start">
         <NavbarBrand className="gap-3 max-w-fit">
           <Link
@@ -84,8 +82,9 @@ export const Navbar = () => {
         justify="end"
       >
         <NavbarItem className="hidden sm:flex gap-2">
+        <EventDrawer isOpen={isOpen} onOpenChange={onOpenChange} onOpen={onOpen} />
           <Link isExternal href={siteConfig.links.github} title="GitHub">
-            <GithubIcon className="text-default-500" />
+            <GithubIcon className="text-default-900 mr-3" width={28} height={28}/>
           </Link>
           <ThemeSwitch />
         </NavbarItem>

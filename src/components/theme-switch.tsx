@@ -5,6 +5,7 @@ import clsx from "clsx";
 import { useTheme } from "@heroui/use-theme";
 
 import { SunFilledIcon, MoonFilledIcon } from "@/components/icons";
+import { MoonIcon, SunIcon } from "@heroicons/react/24/outline";
 
 export interface ThemeSwitchProps {
   className?: string;
@@ -62,7 +63,7 @@ export const ThemeSwitch: FC<ThemeSwitchProps> = ({
               "rounded-lg",
               "flex items-center justify-center",
               "group-data-[selected=true]:bg-transparent",
-              "!text-default-500",
+              "!text-default-900",
               "pt-px",
               "px-0",
               "mx-0",
@@ -72,9 +73,9 @@ export const ThemeSwitch: FC<ThemeSwitchProps> = ({
         })}
       >
         {isSelected ? (
-          <MoonFilledIcon size={22} />
+          <MoonFilledIcon height={28} width={28} />
         ) : (
-          <SunFilledIcon size={22} />
+          <SunFilledIcon height={28} width={28} />
         )}
       </div>
     </Component>
