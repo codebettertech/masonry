@@ -1,6 +1,14 @@
 # Compiled class file
 *.class
 
+# MACOS files
+.DS_Store
+
+# Package distribution directory
+dist/
+# Node modules
+node_modules/
+
 # Log file
 *.log
 

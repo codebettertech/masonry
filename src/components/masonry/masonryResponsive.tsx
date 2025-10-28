@@ -1,0 +1,18 @@
+import { Masonry } from './masonry'
+import MasonryItem from './masonryItem';
+
+import { imageList } from './mockData';
+
+const MasonryResponsive = () => {
+    return (
+        <Masonry columns={{ 576: 1, 640: 2, 786: 2, 1024: 3, 1280: 4, 1536: 4, 1920: 6 }} gap={16}>
+            {imageList.map((item) => {
+                return (
+                    <MasonryItem item={item} />
+                )
+            })}
+        </Masonry>
+    )
+}
+
+export default MasonryResponsive

@@ -1,0 +1,9 @@
+@import "tailwindcss";
+
+@config "../../tailwind.config.js";
+
+.rounded-large {
+    border-radius: 0px!important;
+    border-top-left-radius: 0px!important;
+    border-top-right-radius: 0px!important;
+}
