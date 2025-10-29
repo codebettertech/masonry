@@ -27,7 +27,7 @@ export default MasonryResponsive
 ```js
 mock data:
 
-xport const imageList = [
+export const imageList = [
     { src: '/img/gallery/img-1.webp', title: 'Image 1' },
     { src: '/img/gallery/img-2.webp', title: 'Image 2' },
     { src: '/img/gallery/img-3.webp', title: 'Image 3' },
