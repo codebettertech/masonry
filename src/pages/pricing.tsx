@@ -1,14 +1,9 @@
-import { title } from "@/components/primitives";
-import DefaultLayout from "@/layouts/default";
+import { Player, BigPlayButton } from 'video-react';
 
-export default function DocsPage() {
+export default (props: any) => {
   return (
-    <DefaultLayout>
-      <section className="flex flex-col items-center justify-center gap-4 py-8 md:py-10">
-        <div className="inline-block max-w-lg text-center justify-center">
-          <h1 className={title()}>Pricing</h1>
-        </div>
-      </section>
-    </DefaultLayout>
+    <Player src="https://media.w3.org/2010/05/sintel/trailer_hd.mp4" autoPlay={true}>
+      <BigPlayButton position="center" />
+    </Player>
   );
-}
+};

@@ -23,6 +23,7 @@ import {
 import { Logo } from "@/components/icons";
 import { Avatar, useDisclosure } from "@heroui/react";
 import EventDrawer from "./drawer/eventDrawer";
+import { GlobeEuropeAfricaIcon } from "@heroicons/react/24/outline";
 
 export const Navbar = () => {
   const searchInput = (
@@ -81,12 +82,9 @@ export const Navbar = () => {
         className="hidden sm:flex basis-1/5 sm:basis-full"
         justify="end"
       >
-        <NavbarItem className="hidden sm:flex gap-2">
+        <NavbarItem className="hidden sm:flex gap-2 cursor-pointer">
         <EventDrawer isOpen={isOpen} onOpenChange={onOpenChange} onOpen={onOpen} />
-          <Link isExternal href={siteConfig.links.github} title="GitHub">
-            <GithubIcon className="text-default-900 mr-3" width={28} height={28}/>
-          </Link>
-          <ThemeSwitch />
+        <GlobeEuropeAfricaIcon className="text-default-900 mr-3" width={28} height={28}/>
         </NavbarItem>
         <NavbarItem className="hidden lg:flex">{searchInput}</NavbarItem>
         <NavbarItem className="hidden md:flex">
