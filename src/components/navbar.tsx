@@ -1,4 +1,3 @@
-import { Button } from "@heroui/button";
 import { Kbd } from "@heroui/kbd";
 import { Link } from "@heroui/link";
 import { Input } from "@heroui/input";
@@ -83,8 +82,8 @@ export const Navbar = () => {
         justify="end"
       >
         <NavbarItem className="hidden sm:flex gap-2 cursor-pointer">
-        <EventDrawer isOpen={isOpen} onOpenChange={onOpenChange} onOpen={onOpen} />
-        <GlobeEuropeAfricaIcon className="text-default-900 mr-3" width={28} height={28}/>
+          <EventDrawer isOpen={isOpen} onOpenChange={onOpenChange} onOpen={onOpen} />
+          <GlobeEuropeAfricaIcon className="text-default-900 mr-3" width={28} height={28} />
         </NavbarItem>
         <NavbarItem className="hidden lg:flex">{searchInput}</NavbarItem>
         <NavbarItem className="hidden md:flex">

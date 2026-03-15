@@ -5,7 +5,6 @@ import clsx from "clsx";
 import { useTheme } from "@heroui/use-theme";
 
 import { SunFilledIcon, MoonFilledIcon } from "@/components/icons";
-import { MoonIcon, SunIcon } from "@heroicons/react/24/outline";
 
 export interface ThemeSwitchProps {
   className?: string;
